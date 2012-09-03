@@ -1,8 +1,16 @@
 # Starting Deaf Grandma
 message = ""
+bliss = 0
+ignorance = 3
 while message
   message = gets.chomp
-  break if message == "BYE"
+  if message == "BYE"
+    bliss += 1
+    break if ignorance == bliss
+  else
+    bliss = 0
+  end
+
   if message != message.upcase
     puts "HUH?! SPEAK UP, SONNY!"
   else
